@@ -7,6 +7,15 @@
 \pard\pardeftab720\partightenfactor0
 
 \f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 var number = [19, 3, 81, 1, 24, 21];\
+\outl0\strokewidth0 \strokec2 var sortnumber = function (number) \{\
+    number.sort(function (a, b) \{\
+        if (a == b) \{\
+            return 0;\
+        \}\
+        return a < b ? -1 : 1;\
+    \});\
+\};\
+var number = [19, 3, 81, 1, 24, 21];\
+sortnumber(number);\
 console.log(number);\
 }
